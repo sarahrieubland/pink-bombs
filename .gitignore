@@ -1,6 +1,7 @@
 # Exclude data folders
 data_ras/
 data_canada_BC/
+myenv/
 
 
 # Byte-compiled / optimized / DLL files
