@@ -2,9 +2,9 @@
 
 ## Virtual environment
 
-python3 -m venv name-of-your-venv
+python3 -m venv myenv
 
-source name-of-your-venv/bin/activate
+source myenv/bin/activate
 
 ## Jupyter notebook
 
