@@ -3,7 +3,7 @@ data_ras/
 data_canada_BC/
 myenv/
 Example_maps.ipynb
-
+*.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

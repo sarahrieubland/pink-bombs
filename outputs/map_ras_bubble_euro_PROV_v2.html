@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_009cba947e49bd821fbe29f6cd100e6b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+             <h3 align="center" style="font-size:16px"><b>PROVISIONAL MAP: Land-based (RAS) farms and their carbon footprint (Europe excluding Norway)</b></h3>
+             
+    
+            <div class="folium-map" id="map_009cba947e49bd821fbe29f6cd100e6b" ></div>
+        
+    
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+
+  </script>
+</head>
+<body>
+
+ 
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+     
+<div class='legend-title'>RAS Farms by Status</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:#C66264;opacity:0.7;'></span>Operating</li>
+    <li><span style='background:#FA8072;opacity:0.7;'></span>In construction</li>
+    <li><span style='background:#FEA993;opacity:0.7;'></span>Project</li>
+    <li><span style='background:#CBC1AE;opacity:0.7;'></span>Abandonned</li>
+<div class='legend-subtitle'>Size depends on production and ktCO₂eq</div>
+<li><a href='https://www.agrociwf.fr/media/7440744/ciwf-systemes-en-circuits-recircules-pour-le-grossissement-des-saumons.pdf' target='_blank'>based on 57kgCO₂eq/kgLW (CIWF)</a></li>
+
+
+  </ul>
+</div>
+</div>
+ 
+</body>
+</html>
+
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>
+    
+    
+            var map_009cba947e49bd821fbe29f6cd100e6b = L.map(
+                "map_009cba947e49bd821fbe29f6cd100e6b",
+                {
+                    center: [53.5, 10.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e4a74ff62a6f53253b2d3bba8c903afc = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_e4a74ff62a6f53253b2d3bba8c903afc.addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            var circle_marker_5315d2f0b44ce26c1d50779f18a0edf0 = L.circleMarker(
+                [53.56539, -0.07553],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 5.320320320320326, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_5315d2f0b44ce26c1d50779f18a0edf0.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Aquacultured Seafood</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>United Kingdom</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Grimsby</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>5000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>285.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a16ad3f131e7f3379bf0f410088d60c4 = L.circleMarker(
+                [55.99866, 8.12605],
+                {"bubblingMouseEvents": true, "color": "#CBC1AE", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CBC1AE", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 3.8813813813813876, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_a16ad3f131e7f3379bf0f410088d60c4.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Atlantic Sapphire</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Denmark</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Hvide Sande</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Abandonned</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>2500.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>142.5</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0d634b8a12d8d26189e600d44b64f174 = L.circleMarker(
+                [49.31604, -1.10384],
+                {"bubblingMouseEvents": true, "color": "#C66264", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C66264", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 2.500000000000006, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_0d634b8a12d8d26189e600d44b64f174.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>BDV /SAS</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>France</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Isigny-sur-Mer</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Operating</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>5.7</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_566315e57116e4ddd8e0343e63fe7ed2 = L.circleMarker(
+                [50.63131, 5.97433],
+                {"bubblingMouseEvents": true, "color": "#CBC1AE", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CBC1AE", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 3.133133133133139, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_566315e57116e4ddd8e0343e63fe7ed2.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Cold Water</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Belgium</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Baelen</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Abandonned</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>1200.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>68.4</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6b8e35d5d1c483f2142995cbe18a3338 = L.circleMarker(
+                [57.58812, 9.95922],
+                {"bubblingMouseEvents": true, "color": "#C66264", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C66264", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 3.5935935935936, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_6b8e35d5d1c483f2142995cbe18a3338.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Danish Salmon</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Denmark</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Hirtshals</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Operating</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>2000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>114.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_49b4587983880c29ecf96751dad6d912 = L.circleMarker(
+                [52.22977, 21.01178],
+                {"bubblingMouseEvents": true, "color": "#C66264", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C66264", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 2.787787787787794, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_49b4587983880c29ecf96751dad6d912.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Global Fish</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Poland</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Warsaw</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Operating</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>600.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>34.2</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b4b1e5a6d5e649ef76b450d7e5f19e14 = L.circleMarker(
+                [63.44273, -20.27339],
+                {"bubblingMouseEvents": true, "color": "#fa8072", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fa8072", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 17.98298298298299, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_b4b1e5a6d5e649ef76b450d7e5f19e14.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Icelandic Land Farmed Salmon</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Iceland</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Vestmannaeyjar</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>In construction</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>27000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>1539.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ffc720576e9fb9817e4212e58727659f = L.circleMarker(
+                [50.72485, 1.61373],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 7.622622622622629, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_ffc720576e9fb9817e4212e58727659f.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Local Ocean</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>France</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Boulogne-sur-Mer</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>9000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>513.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fa65ec0055332a14426da5e009f32ced = L.circleMarker(
+                [37.95622, -8.86979],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 5.895895895895902, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_fa65ec0055332a14426da5e009f32ced.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>8</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Maiken Food</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Portugal</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Sines</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>6000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>342.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_be08a703292f73a1ac7ca73c921b818e = L.circleMarker(
+                [43.2572, -3.46516],
+                {"bubblingMouseEvents": true, "color": "#C66264", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C66264", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 4.169169169169175, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_be08a703292f73a1ac7ca73c921b818e.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Norcantabric</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Ramales de la Victoria</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Operating</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>3000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>171.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1a88f1027f5f958779b5574f9b343365 = L.circleMarker(
+                [45.54627, -1.06158],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 13.95395395395396, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_1a88f1027f5f958779b5574f9b343365.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Pure Salmon France</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>France</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Le Verdon-sur-Mer</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>20000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>1140.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_29943cdc3c040e946622e7429f9e13f7 = L.circleMarker(
+                [48.5787, -3.18379],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 7.047047047047053, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_29943cdc3c040e946622e7429f9e13f7.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>11</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Smart Salmon</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>France</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Plouisy</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>8000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>456.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2d534c369f6ebfe895468ffb7324e86c = L.circleMarker(
+                [47.04057, 9.06804],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 4.399399399399406, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_2d534c369f6ebfe895468ffb7324e86c.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>12</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Swiss Blue Salmon</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Switzerland</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Glarus</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>3400.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>193.8</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_de0653091938aaed6f427e1352ff1586 = L.circleMarker(
+                [58.21901, -6.38803],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 54.24424424424425, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_de0653091938aaed6f427e1352ff1586.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>13</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Norwegian Mountain Salmon</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>United Kingdom</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Isle of Lewis</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>90000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>5130.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1710861d85e0976620eadf946b507c64 = L.circleMarker(
+                [51.21551, 2.927],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 9.349349349349355, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_1710861d85e0976620eadf946b507c64.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>14</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Columbi Salmon</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Belgium</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Ostende</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>12000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>684.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bb7b401eb7a808473dbf7ea590478409 = L.circleMarker(
+                [63.9408, -21.4198],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 16.25625625625626, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_bb7b401eb7a808473dbf7ea590478409.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>15</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>GeoSalmo</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Iceland</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Ölfus</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>24000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>1368.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d28899692bfeed0cf56cf1eb2de5c149 = L.circleMarker(
+                [54.0353, 14.9869],
+                {"bubblingMouseEvents": true, "color": "#C66264", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C66264", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 3.018018018018024, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_d28899692bfeed0cf56cf1eb2de5c149.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>16</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Jurassic Salmon</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Poland</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Janowo, West Pomerania</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Operating</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>57.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c233325a45df26f4485f6d9b4b9f17c2 = L.circleMarker(
+                [57.56681, -4.03784],
+                {"bubblingMouseEvents": true, "color": "#CBC1AE", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#CBC1AE", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 25.46546546546547, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_c233325a45df26f4485f6d9b4b9f17c2.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>17</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Niri</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>United Kingdom</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Ardersier, Campbelltown</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Abandonned</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>40000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>2280.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e74a102c2b5ffe92fb959c4d13ee3c92 = L.circleMarker(
+                [58.4225, 11.3449],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 60.0, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_e74a102c2b5ffe92fb959c4d13ee3c92.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>18</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Quality Salmon</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Sweden</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Sotenäs, Kungshamn</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>100000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>5700.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_445bcff60c7caa77dc0642ac8aa4d504 = L.circleMarker(
+                [63.99813, -22.56111],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 25.46546546546547, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_445bcff60c7caa77dc0642ac8aa4d504.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>19</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Samherji</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Iceland</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Reykjanes</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>40000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>2280.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_955a81a672f91733b22d6add102334c6 = L.circleMarker(
+                [43.662, -7.367],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 4.169169169169175, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_955a81a672f91733b22d6add102334c6.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Seafood Legacy</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Burela</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>3000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>171.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_82ffe7c86a30be71fc90b8d508b0eed4 = L.circleMarker(
+                [59.13229, 12.92888],
+                {"bubblingMouseEvents": true, "color": "#FEA993", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FEA993", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 8.198198198198204, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_82ffe7c86a30be71fc90b8d508b0eed4.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>21</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Svensk Lax (RE: OCEAN)</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Sweden</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Saffle</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Project</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>10000.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>570.0</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_28a118855de73bf2abcef48fe5f8c363 = L.circleMarker(
+                [46.3123, 9.1957],
+                {"bubblingMouseEvents": true, "color": "#C66264", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C66264", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 3.4784784784784843, "stroke": true, "weight": 3}
+            ).addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+    
+            circle_marker_28a118855de73bf2abcef48fe5f8c363.bindTooltip(
+                `<div>
+                     <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>22</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Entreprise</th>
+      <td>Swiss Lachs ou Swiss Alpine Fish</td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td>Switzerland</td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td>Lostallo</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td>Operating</td>
+    </tr>
+    <tr>
+      <th>Production Capacity (annual) [tonnes]</th>
+      <td>1800.0</td>
+    </tr>
+    <tr>
+      <th>Carbon Footprint (annual) [kilo tonnes C02 equ]</th>
+      <td>102.6</td>
+    </tr>
+  </tbody>
+</table>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            tile_layer_e4a74ff62a6f53253b2d3bba8c903afc.addTo(map_009cba947e49bd821fbe29f6cd100e6b);
+        
+</script>
+</html>
