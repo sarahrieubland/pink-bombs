@@ -1,7 +1,7 @@
 # Exclude data folders
 data_ras/
 data_canada_BC/
-myenv/
+my_env/
 Example_maps.ipynb
 *.zip
 
